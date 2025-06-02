@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Number Guessing Game 🎯</h1>
+
+    <div class="game-setup">
+      <label>Select Difficulty:</label>
+      <select id="difficulty">
+        <option value="easy">Easy (1–20)</option>
+        <option value="medium">Medium (1–50)</option>
+        <option value="hard">Hard (1–100)</option>
+      </select>
+      <button onclick="startGame()">Start</button>
+    </div>
+
+    <div class="game-area" style="display: none;">
+      <label>Guess the number:</label>
+      <input type="number" id="guessInput">
+      <button onclick="submitGuess()">Submit</button>
+      <p id="feedback"></p>
+      <p>⏱️ Time: <span id="timer">0</span> seconds</p>
+      <button onclick="startGame()">🔁 Restart</button>
+    </div>
+
+    <h2>📊 Scoreboard</h2>
+    <table id="scoreboard">
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Attempts</th>
+          <th>Time (s)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
