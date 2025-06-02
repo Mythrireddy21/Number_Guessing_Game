@@ -20,6 +20,7 @@ A web-based Number Guessing Game built with Python Flask, where users try to gue
 
 
 ## Project Structure
+```
 Number_Guessing_Game/
 │
 ├── app.py               # Main Flask application
@@ -30,6 +31,7 @@ Number_Guessing_Game/
 │   └── index.html       # Frontend HTML file
 └── static/
     └── style.css        # CSS styles
+```
 
 ## Installation & Setup
 
@@ -92,5 +94,6 @@ http://127.0.0.1:5000
 
 This project is licensed under the MIT License.
 
-
+```
 Enjoy playing the Number Guessing Game! 🎯
+```
